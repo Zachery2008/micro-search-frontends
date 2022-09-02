@@ -1,0 +1,33 @@
+{
+  "name": "micro-frontends",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Zachery Zhu",
+  "license": "MIT",
+  "workspaces": [
+    "app/search",
+    "app/search-api",
+    "app/product",
+    "app/content",
+    "app/composer",
+    "slides/screenshooter"
+  ],
+  "scripts": {
+    "dev": "yarn build",
+    "build": "yarn --cwd app/search-api build && yarn --cwd app/search build && yarn --cwd app/product build && yarn --cwd app/content build",
+    "lint": "eslint --fix ./",
+    "format": "prettier --write \"**/*.js\" \"**/*.jsx\"",
+    "pdf": "node ./slides/screenshooter"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "7.17.0",
+    "eslint": "8.12.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.4.0",
+    "prettier": "2.6.2"
+  }
+}

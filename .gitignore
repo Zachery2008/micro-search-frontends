@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.idea/
+dist/
+lib/
+sources
+
+slide-notes/*png
+slide-notes/*html

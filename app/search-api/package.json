@@ -1,0 +1,17 @@
+{
+  "name": "search-api",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rm -rf lib && BABEL_ENV=commonjs babel src/api -d lib",
+    "build-production": "yarn build",
+    "watch": "yarn build --watch",
+    "lint": "eslint --fix --ext .jsx,.js src"
+  },
+  "main": "lib/index.js",
+  "devDependencies": {
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.8",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-flow": "7.16.7"
+  }
+}
